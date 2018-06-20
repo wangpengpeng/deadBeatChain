@@ -141,7 +141,6 @@
            neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 		 }
         //to check if the extension is installed
-        $("#search_value").attr("disabled",true)
         $("#search").attr("disabled",true)
 
 
@@ -151,7 +150,6 @@
             //alert ("Extension wallet is not installed, please install it first.")
             $("#noExtension").removeClass("hide")
         }else{
-            $("#search_value").attr("disabled",false)
             $("#search").attr("disabled",false)
         }
 

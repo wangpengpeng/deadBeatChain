@@ -129,12 +129,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
  
+	  var debug = true;
     //here we use neb.js to call the "get" function to search from the Dictionary
         var nebulas = require("nebulas"),
         Account = nebulas.Account,
         neb = new nebulas.Neb();
-      //  neb.setRequest(new nebulas.HttpRequest("http://testnet.nebulas.io/"));//https://testnet.nebulas.io/  //https://mainnet.nebulas.io
-         neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+		
+		if(debug){
+           neb.setRequest(new nebulas.HttpRequest("http://testnet.nebulas.io/"));  //https://testnet.nebulas.io/  //https://mainnet.nebulas.io
+		 }else{
+           neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+		 }
         //to check if the extension is installed
         $("#search_value").attr("disabled",true)
         $("#search").attr("disabled",true)
@@ -150,8 +155,12 @@
             $("#search").attr("disabled",false)
         }
 
-       
-      var dappAddress =   "n1gJJf5Egjw2wCuMi3gavQ7vRGgahKfV9gz" ;//"idc n1e3SYencyWVCA3RVbGjYo2dXDkgDp2XveD";//"n1yP7SfG157R9ZQs3WpuDGTvmgxebh1rPtf";
+		if(debug){
+			 var dappAddress =   "n1smyNN4KzNdpvm587sMZxZETQGS4jFEc6r" ; // n1S1Py3ERHi8EP4VVpPEbzZnihepQUJmFy9
+		}else{
+		     var dappAddress =   "n1gJJf5Egjw2wCuMi3gavQ7vRGgahKfV9gz" ;//"idc n1e3SYencyWVCA3RVbGjYo2dXDkgDp2XveD";//"n1yP7SfG157R9ZQs3WpuDGTvmgxebh1rPtf";
+		}
+ 
  
    
      $("#search").click(function(){

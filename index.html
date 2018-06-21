@@ -129,7 +129,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
  
-	  var debug = true;
+	  var debug = false;
     //here we use neb.js to call the "get" function to search from the Dictionary
         var nebulas = require("nebulas"),
         Account = nebulas.Account,
@@ -141,7 +141,7 @@
            neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 		 }
         //to check if the extension is installed
-        $("#search").attr("disabled",true)
+        // $("#search").attr("disabled",true)
 
 
         //to check if the extension is installed

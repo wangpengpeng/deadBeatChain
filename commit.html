@@ -104,7 +104,7 @@
         var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
         var nebPay = new NebPay();
 
-		  var debug = true;
+		var debug = false;
 			  
         //to check if the extension is installed
         //if the extension is installed, var "webExtensionWallet" will be injected in to web page
@@ -112,7 +112,7 @@
             //alert ("Extension wallet is not installed, please install it first.")
             $("#noExtension").removeClass("hide")
         }else{
-        //    $("#search").attr("disabled",false)
+           $("#search").attr("disabled",false)
         }
     //    var dappAddress = "n1gJJf5Egjw2wCuMi3gavQ7vRGgahKfV9gz";//"idc n1e3SYencyWVCA3RVbGjYo2dXDkgDp2XveD";
 		
